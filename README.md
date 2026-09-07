@@ -43,14 +43,23 @@ before drafting.
 ## Updating
 
 This repo is the single source of truth. Edit
-`barbara-voice-communication-kb.md` here, commit, and push to both remotes:
+`barbara-voice-communication-kb.md` here and commit:
 
 ```bash
-git add -A && git commit -m "Update voice knowledge base" && git push origin main && git push alpha main
+git add -A && git commit -m "Update voice knowledge base"
 ```
 
-`origin` → `bzafranks/claude-voice-kb`
-`alpha`  → `barbarafranks-alpha/claude-voice-kb`
+The two remotes belong to different GitHub accounts, so each push needs its own
+active `gh` account:
+
+```bash
+gh auth switch -u bzafranks && git push origin main
+gh auth switch -u barbarafranks-alpha && git push alpha main
+```
+
+`origin` -> `bzafranks/claude-voice-kb`
+`alpha`  -> `barbarafranks-alpha/claude-voice-kb`
 
 After pushing, re-upload the file to any Claude Project that holds a copy —
-uploaded Project files do not track the repo.
+uploaded Project files do not track the repo. Claude Code picks up edits to the
+local file immediately, with no push required.
