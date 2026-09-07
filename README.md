@@ -23,7 +23,7 @@ The global user memory at `~/.claude/CLAUDE.md` imports the local clone of this
 file, so it loads into every Claude Code session automatically:
 
 ```
-@C:/Users/barba/Desktop/Claude Projects/claude-voice-kb/barbara-voice-communication-kb.md
+@C:/Users/barba/.claude/claude-voice-kb/barbara-voice-communication-kb.md
 ```
 
 ### Claude app (claude.ai / desktop chat)
